@@ -12,27 +12,37 @@
   TASK A
   Using the body TAG selector, set a background color on the page.
 */
-
+body {
+  background-color: gainsboro;
+}
 
 /*
   TASK B
   Using the h1 TAG selector, set a font size and a color.
 */
-
+h1 {
+  font-size: larger;
+  color: palevioletred;
+}
 
 /*
   TASK C
   Using the CLASS selector, style the list items with the highlight class.
   Give them a background color and some padding so they stand out.
 */
-
+.highlight {
+  background-color: tomato;
+  padding: 5px 10px;
+}
 
 /*
   TASK D
   Using the ID selector, give the h2 with the id section-title a color that is
-  different from the h1 and different from body text.
+  different from the h1 and different from the body text.
 */
-
+#section-title {
+  color: steelblue;
+}
 
 /*
   TASK E
@@ -49,7 +59,15 @@
 
            answer:
 */
-
+#box {
+  width: 200px;
+  height: 100px;
+  border: 2px solid black;
+  padding: 10px;
+  margin: 20px;
+}
+/* Padding is space INSIDE the border, between the content and the edge of the element.
+   Margin is space OUTSIDE the border, pushing other elements away. */
 
 /*
   TASK F
@@ -57,7 +75,13 @@
   It must have a background color, a text color, a border, padding,
   and a cursor: pointer that turns into a pointer when the user hovers over it.
 */
-
+#click-me {
+  background-color: steelblue;
+  color: white;
+  border: 2px solid navy;
+  padding: 8px 16px;
+  cursor: pointer;
+}
 
 /*
   TASK G — Specificity
@@ -74,3 +98,14 @@
 
            answer:
 */
+p {
+  color: steelblue;
+}
+#intro {
+  color: tomato;
+}
+/* The ID rule (#intro) won — the paragraph is tomato.
+   CSS specificity is a scoring system the browser uses to decide which rule wins
+   when two rules target the same element.
+   IDs score higher than tag selectors, so #intro beats p every time,
+   regardless of which rule appears first in the file. */
